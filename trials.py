@@ -11,6 +11,16 @@ TOPICS = {
     "Alzheimer's disease": "Alzheimer Disease",
     "Parkinson's disease": "Parkinson Disease",
     "Mild cognitive impairment": "Mild Cognitive Impairment",
+    "Epilepsy": "Epilepsy",
+    "Multiple sclerosis": "Multiple Sclerosis",
+    "Stroke": "Stroke",
+    "Traumatic brain injury": "Traumatic Brain Injury",
+    "Amyotrophic lateral sclerosis": "Amyotrophic Lateral Sclerosis",
+    "Huntington's disease": "Huntington Disease",
+    "Migraine": "Migraine",
+    "Sleep disorders": "Sleep Wake Disorders",
+    "ADHD": "Attention Deficit Hyperactivity Disorder",
+    "Autism spectrum disorder": "Autism Spectrum Disorder",
 }
 QUESTIONS = {
     "Study design": "What study types, allocation, masking, phases, and enrollment are described?",

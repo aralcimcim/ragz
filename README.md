@@ -18,7 +18,7 @@ Use **List** for a compact, keyboard-friendly view, which is the default on smal
 
 Connections represent the search you composed and records actually retrieved. They do not assert biological relationships, causation, scientific agreement, or evidence quality. Changing concepts clears previous evidence and explanations; layout-only changes preserve them. Maps are session-local unless explicitly exported.
 
-The canvas is a [local Streamlit component](https://docs.streamlit.io/develop/concepts/custom-components/components-v1/intro) built with HTML, CSS, JavaScript, and SVG. No npm build, external graph library, font service, or CDN is required.
+The canvas is a [local Streamlit component](https://docs.streamlit.io/develop/concepts/custom-components/components-v1/intro) built with HTML, CSS, JavaScript, and SVG. No npm build, external graph library, font service, or CDN is required. The academic serif is locally hosted STIX Two Text; its license is included in `fonts/OFL.txt`. Dark blue is the primary accent.
 
 ## Run locally
 
@@ -32,11 +32,13 @@ python build_index.py
 python -m streamlit run app.py --server.port 8503
 ```
 
-Open the local URL printed by Streamlit. The default index contains up to 30 recently updated Alzheimer's trial records. To include all three topics:
+Open the local URL printed by Streamlit. The default index contains up to 10 recently updated records per topic across 13 neuroscience topics. To request a larger snapshot:
 
 ```bash
-python build_index.py --topic All --limit 30
+python build_index.py --topic All --limit 20
 ```
+
+Topics include Alzheimer's disease, Parkinson's disease, mild cognitive impairment, epilepsy, multiple sclerosis, stroke, traumatic brain injury, ALS, Huntington's disease, migraine, sleep disorders, ADHD, and autism spectrum disorder. They are registry search categories, not diagnoses or clinical advice.
 
 Each build replaces the previous index. The first build downloads a small embedding model, runs it on CPU, and saves public source records, model files, and an SQLite vector index under `.local/`. No GPU, Azure subscription, or language model API key is needed for search and comparisons.
 

@@ -25,9 +25,15 @@ except (ValueError, sqlite3.Error) as error:
     st.code("python build_index.py --topic All")
     st.stop()
 
-st.caption(f"{len(trials)} trial records · {len(chunks)} passages · snapshot {metadata['retrieved_at'][:10]} · ClinicalTrials.gov")
+st.caption(f"{len(metadata['topics'])} neuroscience topics · {len(trials)} trial records · {len(chunks)} passages · snapshot {metadata['retrieved_at'][:10]} · ClinicalTrials.gov")
 catalog = catalog_for(trials, metadata["topics"])
 starter = default_map(catalog)
+revision = str(DB_PATH.stat().st_mtime_ns)
+if st.session_state.get("catalog_revision") != revision:
+    st.session_state.catalog_revision = revision
+    st.session_state.research_map = starter
+    st.session_state.pop("last_canvas_event", None)
+    st.session_state.pop("map_search_pending", None)
 try:
     state = validate_map(st.session_state.get("research_map", starter), catalog)
 except ValueError:
@@ -45,7 +51,7 @@ scope = trial_scope(trials, state, catalog)
 questions = question_keys(state, catalog)
 hits = st.session_state.get("hits", [])
 payload = research_canvas(catalog, state, map_evidence(hits), len(scope), starter,
-                          st.session_state.get("last_canvas_event"))
+                          st.session_state.get("last_canvas_event"), revision)
 if payload and isinstance(payload, dict) and payload.get("event_id") != st.session_state.get("last_canvas_event"):
     event_id = payload.get("event_id")
     if isinstance(event_id, str) and len(event_id) <= 100:

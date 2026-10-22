@@ -8,8 +8,8 @@ from trials import TOPICS, fetch_trials, make_chunks
 
 def main():
     parser = argparse.ArgumentParser(description="Build a local RAG index from public neuroscience trial records.")
-    parser.add_argument("--topic", choices=[*TOPICS, "All"], default="Alzheimer's disease")
-    parser.add_argument("--limit", type=int, default=30, help="Trials per topic, 1–100")
+    parser.add_argument("--topic", choices=[*TOPICS, "All"], default="All")
+    parser.add_argument("--limit", type=int, default=10, help="Trials per topic, 1–100")
     args = parser.parse_args()
     if not 1 <= args.limit <= 100:
         parser.error("Use a limit between 1 and 100.")

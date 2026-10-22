@@ -6,6 +6,6 @@ import streamlit.components.v1 as components
 _canvas = components.declare_component("research_canvas", path=str(Path(__file__).with_name("frontend")))
 
 
-def research_canvas(catalog, state, evidence, matching_count, initial_state, ack):
+def research_canvas(catalog, state, evidence, matching_count, initial_state, ack, revision="default"):
     return _canvas(catalog=catalog, state=state, evidence=evidence, matching_count=matching_count,
-                   initial_state=initial_state, ack=ack, default=None, key="research_canvas")
+                   initial_state=initial_state, ack=ack, default=None, key=f"research_canvas_{revision}")
