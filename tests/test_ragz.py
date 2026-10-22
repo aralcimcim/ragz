@@ -95,6 +95,15 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(result, answer)
             self.assertIsNone(api.models.generate_content.call_args.kwargs["config"].tools)
 
+    def test_combined_preset_questions_are_sent_together(self):
+        import json
+        with patch("rag.genai.Client") as client, patch.dict("os.environ", {"GEMINI_API_KEY": "test-key"}):
+            api = client.return_value.__enter__.return_value
+            api.models.generate_content.return_value.text = Answer(claims=[], limitations="Small snapshot").model_dump_json()
+            summarize(["Study design", "Primary outcomes"], [{"source_id": "one", "text": "Memory score"}])
+            contents = json.loads(api.models.generate_content.call_args.kwargs["contents"])
+            self.assertEqual(len(contents["questions"]), 2)
+
 
 if __name__ == "__main__":
     unittest.main()

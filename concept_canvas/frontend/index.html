@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="canvas.css">
+  <title>RAGz research canvas</title>
+</head>
+<body>
+<main class="workspace" aria-label="Visual research workspace">
+  <aside class="library">
+    <div class="library-head"><span class="overline">YOUR BUILDING BLOCKS</span><h2>Concept library</h2><p>Drag a card onto the canvas.<br>Or select it to add.</p></div>
+    <nav class="tabs" aria-label="Concept categories">
+      <button type="button" data-tab="topic" aria-pressed="true">Topics</button>
+      <button type="button" data-tab="question" aria-pressed="false">Questions</button>
+      <button type="button" data-tab="filters" aria-pressed="false">Filters</button>
+    </nav>
+    <div id="palette" class="palette"></div>
+    <div class="library-note"><b>A map with meaning.</b><br>Topics combine with OR.<br>Study filters narrow the scope.<br>Each question gets its own search.</div>
+  </aside>
+  <section class="canvas-panel" aria-label="Research map">
+    <div class="toolbar">
+      <div><span class="live-dot"></span><strong>Research canvas</strong><span id="concept-count" class="muted"></span></div>
+      <div class="tools"><button id="undo" title="Undo last map change" disabled>Undo</button><button id="arrange">Arrange</button><button id="reset">Reset</button><button id="clear">Clear</button><button id="save">Save map</button></div>
+    </div>
+    <div class="view-bar"><span class="hint">Move ideas around. Build your own path.</span><div class="view-toggle"><button id="map-view" aria-pressed="true">Map</button><button id="list-view" aria-pressed="false">List</button></div></div>
+    <div id="board-scroll" class="board-scroll">
+      <div id="board" class="board" role="region" aria-label="Drop concepts here to build a research map">
+        <svg id="edges" viewBox="0 0 900 550" aria-hidden="true"></svg>
+        <div id="hub" class="hub"><span class="overline">YOUR RESEARCH QUESTION</span><h3>Connect your concepts</h3><p id="hub-question">Add a topic and a question.</p><div class="hub-footer"><span id="match-count">0 matching trials</span><span class="hub-arrow">↗</span></div></div>
+        <div id="nodes"></div>
+        <div id="drop-cue">Drop to connect</div>
+      </div>
+    </div>
+    <div id="selected-list" class="selected-list" hidden></div>
+    <div class="map-footer"><span><i class="legend topic"></i> Topic <i class="legend question"></i> Question <i class="legend filter"></i> Study filter <i class="legend evidence"></i> Retrieved source</span><span>Connections define search scope, not biological relationships.</span></div>
+    <div class="action-row"><div><strong id="selection-summary">Start with a topic and a question</strong><span id="selection-detail">No personal health information is needed.</span></div><button id="search" class="search-button">Search this map <span>↗</span></button></div>
+  </section>
+</main>
+<section id="evidence-drawer" class="evidence-drawer" hidden aria-label="Source evidence"><div class="drawer-head"><div><span class="overline">RETRIEVED REGISTRY RECORD</span><h2 id="drawer-title"></h2></div><button id="close-drawer">Close</button></div><p id="drawer-study"></p><div id="drawer-passages"></div><a id="drawer-source" target="_blank" rel="noopener noreferrer">Open original registry record ↗</a></section>
+<p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+<script src="canvas.js"></script>
+</body></html>

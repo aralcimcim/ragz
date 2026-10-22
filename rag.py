@@ -40,7 +40,8 @@ def validate_evidence(answer, hits):
 
 
 def summarize(question_key, hits):
-    if question_key not in QUESTIONS or not hits:
+    keys = [question_key] if isinstance(question_key, str) else question_key
+    if not isinstance(keys, list) or not keys or any(not isinstance(k, str) or k not in QUESTIONS for k in keys) or not hits:
         raise ValueError("Select a research question and retrieve evidence first.")
     load_dotenv(ROOT / ".env")
     key = os.getenv("GEMINI_API_KEY", "").strip()
@@ -49,7 +50,7 @@ def summarize(question_key, hits):
     with genai.Client(api_key=key, http_options=types.HttpOptions(timeout=60000)) as client:
         response = client.models.generate_content(
             model=os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite"),
-            contents=json.dumps({"question": QUESTIONS[question_key], "evidence": hits}),
+            contents=json.dumps({"questions": [QUESTIONS[k] for k in keys], "evidence": hits}),
             config=types.GenerateContentConfig(
                 response_mime_type="application/json", response_schema=Answer,
                 system_instruction=(
