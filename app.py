@@ -14,7 +14,7 @@ from workspace import (catalog_for, default_map, map_evidence, question_keys, se
 
 
 st.set_page_config(page_title="RAGz · Research canvas", page_icon="🧠", layout="wide")
-setup_ui("#354f87", "#edf0f9")
+setup_ui("#0080FE", "#edf0f9")
 st.markdown('''<div class="workspace-nav"><div class="workspace-brand"><span class="brand-symbol" aria-hidden="true">⌘</span>RAGz<span class="nav-divider">/</span><span class="nav-subtitle">Research canvas</span></div><span class="nav-status">PUBLIC DATA · LOCAL SEARCH</span></div>
 <div class="canvas-intro"><div class="eyebrow">A WORKSPACE FOR CONNECTED THINKING</div><h1>Make connections.<br><span class="muted-heading">Ask better questions.</span></h1><p>Bring topics, questions, and study filters onto one canvas.<br>Combine your ideas. Then follow them back to the evidence.</p></div>''', unsafe_allow_html=True)
 
