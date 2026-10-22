@@ -1,0 +1,7 @@
+streamlit>=1.40,<2
+fastembed
+numpy
+requests
+google-genai
+pydantic>=2,<3
+python-dotenv
