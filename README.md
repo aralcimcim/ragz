@@ -69,6 +69,10 @@ The corpus is a bounded condition search (up to 100 records per topic), sorted b
 
 Only public records and preset questions enter the app's workflow. Hosting providers and API providers still have their own logging and data policies. Before an unrestricted public deployment, add request limits and configure spending limits and hosting; this repository does not deploy anything automatically.
 
+## Retrieval evaluation
+
+A separate labelled development set measures whether supporting evidence appears in the top five results: **9/12 questions (75% Hit@5)** over a frozen corpus of 119 trials and 911 passages. This uses the actual retriever and local embeddings, without generation. The 12 questions were authored by the coding assistant and are not independently adjudicated or held out. See [the evaluation protocol, labels, misses, and rerun instructions](evaluation/README.md). Software tests below do not measure retrieval quality.
+
 ## Tests
 
 ```bash

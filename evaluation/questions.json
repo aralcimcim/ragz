@@ -1,0 +1,134 @@
+[
+  {
+    "id": "R01",
+    "question": "What stimulation intensity and pulse pattern are planned for the young-onset Alzheimer theta-burst study?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04042532:interventions:0",
+        "quote": "the intensity is 90% of active motor threshold"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R02",
+    "question": "Over what period is the neuropsychological battery used to diagnose mild cognitive impairment assessed?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT03138018:outcomes:0",
+        "quote": "Time frame: 48 months"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R03",
+    "question": "For the infant tuberous sclerosis prevention study, how long is the clinical-seizure outcome monitored?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04987463:outcomes:0",
+        "quote": "Time frame: 730 days"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R04",
+    "question": "What disability scale and follow-up timing are used in the multimodal multiple sclerosis severity study?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT03369106:outcomes:0",
+        "quote": "Time frame: Baseline and 18 months"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R05",
+    "question": "How is cardiac rhythm monitored around patent foramen ovale closure after cryptogenic stroke?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04926142:interventions:0",
+        "quote": "Implantation of a Holter device (Reveal Linq, Medtronic) for telemonitoring of cardiac rhythm"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R06",
+    "question": "How many stimulation sessions accompany MusicGlove hand exercises in acquired brain injury?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04057105:interventions:0",
+        "quote": "once a day on 10 weekdays over a period of 2-3 weeks"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R07",
+    "question": "Which doses of resveratrol and curcumin are combined in the ALS polyphenol protocol?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04654689:interventions:0",
+        "quote": "resveratrol (75mg) and curcumin (200mg)"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R08",
+    "question": "How is the main outcome of the Jumpstart goals-of-care communication study measured, and when?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT05596760:outcomes:0",
+        "quote": "90 days following randomization"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R09",
+    "question": "What is the primary endpoint and assessment window for eptinezumab in adolescents with chronic migraine?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04965675:outcomes:0",
+        "quote": "Monthly Migraine Days (MMDs) Averaged Over Weeks 1-12"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R10",
+    "question": "How many individual therapy sessions are provided for chronic insomnia and over how many weeks?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT04024787:interventions:0",
+        "quote": "8 sessions of 50 minutes spread over 12 weeks"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R11",
+    "question": "What primary measurement is collected in the childhood psychiatric-disorders brain imaging study?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT00001246:outcomes:0",
+        "quote": "Volumetric MRI Data"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  },
+  {
+    "id": "R12",
+    "question": "What skills are covered by the modules in the autism life-skills and resilience program?",
+    "relevant_sources": [
+      {
+        "source_id": "NCT03842332:interventions:0",
+        "quote": "conflict resolution and the management of stressors"
+      }
+    ],
+    "scope": "All indexed trials; no topic/status filters"
+  }
+]

@@ -1,0 +1,241 @@
+{
+  "metric": "Hit@5: fraction of questions with at least one labelled supporting passage in the first five results",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "fastembed_version": "0.9.0",
+  "corpus_sha256": "5b5e09e268efad304ee58cfbf8d21f0f2e1b2f88a8c9471529b6040cedc97f72",
+  "questions_sha256": "6df035bca6e013a0738e0bc8dd5cc78f8a9f197539f60f15ed437faf5dc94c65",
+  "corpus_counts": {
+    "trials": 119,
+    "passages": 911
+  },
+  "settings": {
+    "top_k": 5,
+    "scope": "All frozen trials, no filters",
+    "max_passages_per_trial": 2
+  },
+  "summary": {
+    "trial_question / Semantic": {
+      "questions": 12,
+      "hits": 9,
+      "hit_at_5": 0.75
+    }
+  },
+  "cases": [
+    {
+      "id": "R01",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "What stimulation intensity and pulse pattern are planned for the young-onset Alzheimer theta-burst study?",
+      "support_in_top_5": true,
+      "first_support_rank": 2,
+      "expected_source_ids": [
+        "NCT04042532:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04042532:overview:0",
+        "NCT04042532:interventions:0",
+        "NCT05448768:overview:0",
+        "NCT07391436:overview:1",
+        "NCT07872007:outcomes:10"
+      ]
+    },
+    {
+      "id": "R02",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "Over what period is the neuropsychological battery used to diagnose mild cognitive impairment assessed?",
+      "support_in_top_5": true,
+      "first_support_rank": 1,
+      "expected_source_ids": [
+        "NCT03138018:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT03138018:outcomes:0",
+        "NCT07391436:outcomes:0",
+        "NCT07391436:overview:1",
+        "NCT03138018:overview:0",
+        "NCT07246941:outcomes:1"
+      ]
+    },
+    {
+      "id": "R03",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "For the infant tuberous sclerosis prevention study, how long is the clinical-seizure outcome monitored?",
+      "support_in_top_5": true,
+      "first_support_rank": 2,
+      "expected_source_ids": [
+        "NCT04987463:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT07728097:outcomes:0",
+        "NCT04987463:outcomes:0",
+        "NCT05534672:outcomes:0",
+        "NCT05534672:eligibility:0",
+        "NCT07885826:outcomes:3"
+      ]
+    },
+    {
+      "id": "R04",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "What disability scale and follow-up timing are used in the multimodal multiple sclerosis severity study?",
+      "support_in_top_5": true,
+      "first_support_rank": 1,
+      "expected_source_ids": [
+        "NCT03369106:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT03369106:outcomes:0",
+        "NCT07889271:overview:0",
+        "NCT03369106:overview:0",
+        "NCT07310862:overview:0",
+        "NCT06753331:outcomes:0"
+      ]
+    },
+    {
+      "id": "R05",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "How is cardiac rhythm monitored around patent foramen ovale closure after cryptogenic stroke?",
+      "support_in_top_5": true,
+      "first_support_rank": 2,
+      "expected_source_ids": [
+        "NCT04926142:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04926142:overview:0",
+        "NCT04926142:interventions:0",
+        "NCT07872007:overview:0",
+        "NCT07890259:outcomes:0",
+        "NCT07888543:interventions:0"
+      ]
+    },
+    {
+      "id": "R06",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "How many stimulation sessions accompany MusicGlove hand exercises in acquired brain injury?",
+      "support_in_top_5": false,
+      "first_support_rank": null,
+      "expected_source_ids": [
+        "NCT04057105:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04057105:overview:0",
+        "NCT04057105:overview:1",
+        "NCT07310862:interventions:0",
+        "NCT07887802:overview:0",
+        "NCT07887802:interventions:0"
+      ]
+    },
+    {
+      "id": "R07",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "Which doses of resveratrol and curcumin are combined in the ALS polyphenol protocol?",
+      "support_in_top_5": true,
+      "first_support_rank": 1,
+      "expected_source_ids": [
+        "NCT04654689:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04654689:interventions:0",
+        "NCT04654689:overview:0",
+        "NCT05151471:overview:0",
+        "NCT07838675:overview:0",
+        "NCT07688239:overview:0"
+      ]
+    },
+    {
+      "id": "R08",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "How is the main outcome of the Jumpstart goals-of-care communication study measured, and when?",
+      "support_in_top_5": true,
+      "first_support_rank": 2,
+      "expected_source_ids": [
+        "NCT05596760:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT05596760:overview:0",
+        "NCT05596760:outcomes:0",
+        "NCT07886398:outcomes:0",
+        "NCT07110337:outcomes:0",
+        "NCT07886398:outcomes:1"
+      ]
+    },
+    {
+      "id": "R09",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "What is the primary endpoint and assessment window for eptinezumab in adolescents with chronic migraine?",
+      "support_in_top_5": false,
+      "first_support_rank": null,
+      "expected_source_ids": [
+        "NCT04965675:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04965675:overview:0",
+        "NCT04965675:eligibility:0",
+        "NCT06212661:eligibility:0",
+        "NCT07313800:overview:0",
+        "NCT07532109:interventions:0"
+      ]
+    },
+    {
+      "id": "R10",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "How many individual therapy sessions are provided for chronic insomnia and over how many weeks?",
+      "support_in_top_5": true,
+      "first_support_rank": 1,
+      "expected_source_ids": [
+        "NCT04024787:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT04024787:interventions:0",
+        "NCT07335276:interventions:0",
+        "NCT04024787:eligibility:1",
+        "NCT07335276:outcomes:0",
+        "NCT07640802:overview:1"
+      ]
+    },
+    {
+      "id": "R11",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "What primary measurement is collected in the childhood psychiatric-disorders brain imaging study?",
+      "support_in_top_5": false,
+      "first_support_rank": null,
+      "expected_source_ids": [
+        "NCT00001246:outcomes:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT00001246:overview:0",
+        "NCT06753331:outcomes:1",
+        "NCT07888543:outcomes:0",
+        "NCT07882823:outcomes:0",
+        "NCT05916339:outcomes:0"
+      ]
+    },
+    {
+      "id": "R12",
+      "task": "trial_question",
+      "mode": "Semantic",
+      "question": "What skills are covered by the modules in the autism life-skills and resilience program?",
+      "support_in_top_5": true,
+      "first_support_rank": 1,
+      "expected_source_ids": [
+        "NCT03842332:interventions:0"
+      ],
+      "retrieved_source_ids": [
+        "NCT03842332:interventions:0",
+        "NCT03842332:overview:0",
+        "NCT07276750:interventions:1",
+        "NCT06705907:overview:0",
+        "NCT06705907:interventions:1"
+      ]
+    }
+  ]
+}
