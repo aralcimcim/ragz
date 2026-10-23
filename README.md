@@ -60,34 +60,3 @@ Each generated claim must cite a retrieved source ID and an exact supporting quo
 4. Optionally send retrieved passages to Gemini for a structured, cited explanation.
 
 The source snapshot records retrieval time and API version information. Registry links and last-update dates accompany the evidence. Rebuild to refresh it.
-
-## Scope and limits
-
-This is a research education prototype, not medical advice or a tool for diagnosis, treatment selection, or personal eligibility decisions. Registry entries describe study protocols; planned outcomes are not study findings. Results tables are not indexed, even when the registry's results-posted flag is true.
-
-The corpus is a bounded condition search (up to 100 records per topic), sorted by latest registry update. It is not a systematic review. Search results are selected passages, not exhaustive comparisons. Registry records may be incomplete or outdated.
-
-Only public records and preset questions enter the app's workflow. Hosting providers and API providers still have their own logging and data policies. Before an unrestricted public deployment, add request limits and configure spending limits and hosting; this repository does not deploy anything automatically.
-
-## Retrieval evaluation
-
-A separate labelled development set measures whether supporting evidence appears in the top five results: **9/12 questions (75% Hit@5)** over a frozen corpus of 119 trials and 911 passages. This uses the actual retriever and local embeddings, without generation. The 12 questions were authored by the coding assistant and are not independently adjudicated or held out. See [the evaluation protocol, labels, misses, and rerun instructions](evaluation/README.md). Software tests below do not measure retrieval quality.
-
-## Tests
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-Tests use synthetic registry records and do not call Gemini.
-
-## Container deployment
-
-```bash
-docker build -t ragz .
-docker run --rm -p 8503:8501 ragz
-```
-
-Open `http://localhost:8503`. The image builds its own public index and CPU model cache, runs as a non-root user, and exposes a health endpoint at `/_stcore/health`. Building requires internet access. Rebuild the image to refresh the snapshot. `.env`, local data, and secrets are excluded from the build context.
-
-For optional Gemini access, supply credentials at runtime with `docker run --rm --env-file .env -p 8503:8501 ragz`. Configure HTTPS, hosting resource limits, and API usage controls on your hosting platform before unrestricted public access. No cloud resources are provisioned by this code.
