@@ -1,4 +1,4 @@
-"""RAGz: compose research scopes on an interactive concept canvas."""
+"""TrialTrace: compose research scopes on an interactive concept canvas."""
 
 import json
 import sqlite3
@@ -13,9 +13,9 @@ from workspace import (catalog_for, default_map, map_evidence, question_keys, se
                        selected_concepts, trial_scope, validate_map)
 
 
-st.set_page_config(page_title="RAGz · Research canvas", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="TrialTrace · Research canvas", page_icon="🧠", layout="wide")
 setup_ui("#0080FE", "#edf0f9")
-st.markdown('''<div class="workspace-nav"><div class="workspace-brand"><span class="brand-symbol" aria-hidden="true">⌘</span>RAGz<span class="nav-divider">/</span><span class="nav-subtitle">Research canvas</span></div><span class="nav-status">PUBLIC DATA · LOCAL SEARCH</span></div>
+st.markdown('''<div class="workspace-nav"><div class="workspace-brand"><span class="brand-symbol" aria-hidden="true">⌘</span>TrialTrace<span class="nav-divider">/</span><span class="nav-subtitle">Research canvas</span></div><span class="nav-status">PUBLIC DATA · LOCAL SEARCH</span></div>
 <div class="canvas-intro"><div class="eyebrow">A WORKSPACE FOR CONNECTED THINKING</div><h1>Make connections.<br><span class="muted-heading">Ask better questions.</span></h1><p>Bring topics, questions, and study filters onto one canvas.<br>Combine your ideas. Then follow them back to the evidence.</p></div>''', unsafe_allow_html=True)
 
 try:
@@ -171,4 +171,4 @@ with st.expander("How connections, data, and privacy work"):
     st.write("No patient uploads or personal health questions are accepted. Map contents stay in the session unless you choose Save map, which downloads a local JSON file. Only an explicit explanation request sends retrieved public passages and preset questions to Gemini.")
     st.markdown("[ClinicalTrials.gov](https://clinicaltrials.gov/)")
 st.divider()
-st.caption("RAGz / Research canvas · Research education only · Not medical advice or a personal eligibility assessment.")
+st.caption("TrialTrace / Research canvas · Research education only · Not medical advice or a personal eligibility assessment.")

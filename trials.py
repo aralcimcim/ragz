@@ -79,7 +79,7 @@ def fetch_trials(topic, limit=30):
     params = {"query.cond": TOPICS[topic], "pageSize": min(limit, 100),
               "format": "json", "sort": "LastUpdatePostDate:desc"}
     with requests.Session() as session:
-        session.headers["User-Agent"] = "RAGz public clinical research explorer"
+        session.headers["User-Agent"] = "TrialTrace public clinical research explorer"
         response = session.get(f"{API}/version", timeout=40)
         response.raise_for_status()
         version = response.json()

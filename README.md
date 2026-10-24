@@ -1,4 +1,4 @@
-# RAGz
+# TrialTrace
 
 A visual research workspace for exploring public neuroscience clinical trial protocols with local semantic search and optional cited Gemini explanations.
 
@@ -26,7 +26,7 @@ The canvas is a [local Streamlit component](https://docs.streamlit.io/develop/co
 git clone https://github.com/aralcimcim/ragz.git
 cd ragz
 conda env create -f environment.yml
-conda activate ragz
+conda activate trialtrace
 python -m pip install -r requirements.txt
 python build_index.py
 python -m streamlit run app.py --server.port 8503

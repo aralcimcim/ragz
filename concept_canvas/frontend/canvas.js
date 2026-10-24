@@ -143,7 +143,7 @@
   $("save").onclick=()=>{
     const data={version:1,concepts:state.ids.map(id=>({...concept(id),position:state.positions[id]})),retrieved_trial_ids:evidence.map(e=>e.id)};
     const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}));
-    const a=el("a");a.href=url;a.download="ragz-research-map.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);
+    const a=el("a");a.href=url;a.download="trialtrace-research-map.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);
   };
   window.addEventListener("message",event=>{
     if(event.source!==window.parent||event.data.type!=="streamlit:render")return;
