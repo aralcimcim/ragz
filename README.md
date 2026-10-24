@@ -42,7 +42,7 @@ Topics include Alzheimer's disease, Parkinson's disease, mild cognitive impairme
 
 Each build replaces the previous index. The first build downloads a small embedding model, runs it on CPU, and saves public source records, model files, and an SQLite vector index under `.local/`. No GPU, Azure subscription, or language model API key is needed for search and comparisons.
 
-## Optional Gemini explanation
+## Use with Gemini
 
 ```bash
 cp .env.example .env
