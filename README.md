@@ -23,8 +23,8 @@ The canvas is a [local Streamlit component](https://docs.streamlit.io/develop/co
 ## Run locally
 
 ```bash
-git clone https://github.com/aralcimcim/ragz.git
-cd ragz
+git clone https://github.com/aralcimcim/trialtrace.git
+cd trialtrace
 conda env create -f environment.yml
 conda activate trialtrace
 python -m pip install -r requirements.txt
